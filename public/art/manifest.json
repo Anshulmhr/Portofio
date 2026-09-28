@@ -1,0 +1,98 @@
+{
+  "style": {
+    "palette": [
+      "#10152a",
+      "#233a4d",
+      "#8971b7",
+      "#e9d29d"
+    ],
+    "lighting": "upper-right moonlight, gold lanterns",
+    "scale": "nearest-neighbor raster exports"
+  },
+  "assets": [
+    {
+      "id": "clearing",
+      "file": "clearing.webp",
+      "dimensions": [
+        768,
+        512
+      ],
+      "source": "OpenAI built-in imagegen, original generation",
+      "usage": "base environment",
+      "anchor": "center 55%; mobile 70% center"
+    },
+    {
+      "id": "foreground",
+      "file": "foreground.webp",
+      "dimensions": [
+        512,
+        342
+      ],
+      "source": "OpenAI built-in imagegen, original transparent generation",
+      "usage": "independent foreground parallax",
+      "anchor": "bottom center"
+    },
+    {
+      "id": "gate",
+      "file": "gate.webp",
+      "dimensions": [
+        420,
+        280
+      ],
+      "source": "OpenAI built-in imagegen, original transparent generation",
+      "usage": "stationary stone posts and independently hinged leaves",
+      "anchor": "foreground right; mobile bottom center",
+      "slices": {
+        "leftPost": [
+          0,
+          0.15
+        ],
+        "leftLeaf": [
+          0.15,
+          0.5
+        ],
+        "rightLeaf": [
+          0.5,
+          0.85
+        ],
+        "rightPost": [
+          0.85,
+          1
+        ]
+      },
+      "promptRecord": "docs/phase-3-art-prompt.txt"
+    },
+    {
+      "id": "wizard-cat",
+      "file": "cat-sprites.webp",
+      "dimensions": [
+        384,
+        256
+      ],
+      "source": "OpenAI built-in imagegen, original transparent generation",
+      "usage": "six-frame character atlas",
+      "frames": {
+        "columns": 3,
+        "rows": 2,
+        "size": [
+          128,
+          128
+        ],
+        "order": [
+          "idle",
+          "blink",
+          "look-left",
+          "look-right",
+          "sleep",
+          "alert"
+        ],
+        "groundLine": 117.5
+      },
+      "master": "docs/art-masters/wizard-cat-sprites-master.png",
+      "exportScript": "scripts/export-cat-art.py",
+      "promptRecord": "docs/phase-4-art-prompt.txt"
+    }
+  ],
+  "promptRecord": "docs/phase-2-art-prompts.txt",
+  "notes": "AI-assisted garden, independent gate leaves, and normalized wizard-cat sprite atlas. Character is decorative at the entrance and offers local navigation after entry."
+}
