@@ -1,0 +1,13 @@
+Use case: stylized-concept
+Asset type: transparent pixel-art sprite sheet for a mystical portfolio garden.
+Create ONE 1536x1024 PNG sprite sheet with a real transparent alpha background, arranged in exactly 3 columns and 2 rows of invisible 512x512 cells. Six poses of the SAME small friendly wizard cat, one centered in each cell. Character scale must match across poses, with seated paws / lower body baseline at local y=450 in each cell. Keep every silhouette, tail, hat tip and sparkle fully inside its own cell, with ample transparent padding; do not crop any character.
+Subject identity across all six frames: dark midnight-blue cat, warm amber eyes, a small cream chest patch, deep plum pointed wizard hat with a muted gold band and a small crescent charm. Same face shape, same anatomy, same body proportions, same hat silhouette, same colors and pixel density in all frames; only pose/expression changes. Friendly understated fantasy personality.
+Frame order read left to right:
+Top-left: seated, facing front, idle, eyes open.
+Top-middle: identical front seated idle pose but both eyes gently closed in a blink.
+Top-right: seated, head looking left.
+Bottom-left: seated, head looking right.
+Bottom-middle: sleeping, body curled with tail tucked around it, wizard hat still on; same character scale.
+Bottom-right: seated front, alert, warm amber eyes more open, tiny gold sparkle at hat.
+Style: refined, crisp pixel-art sprite work, deliberate visible square pixel grid, restrained tiny stepped highlights, clean readable silhouettes at small display size. Palette harmonizes with a moonlit fantasy garden: navy and indigo shadows, dusky purple/plum, cool blue rim highlights, cream and warm old-gold accents. Avoid painterly blur, gradients, vector smoothness, or heavy outlines.
+Background: absolutely empty real transparency surrounding and between characters. No checkerboard pattern baked into image. No labels, gridlines, text, borders, watermark, ground, shadows, props, scenery or platforms. Only the six cat sprites.
