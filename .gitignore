@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.build/
+.sites-runtime/
+.env
+.env.*
+!.env.example
+*.log
+
+# Local hosting and editor runtime metadata
+.openai/
+.DS_Store
