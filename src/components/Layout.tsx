@@ -1,6 +1,6 @@
 import { WizardCat } from '../character/WizardCat';
 import type { ReactNode } from 'react';
-import { scenes } from '../world/scenes';
+import { GardenNavigation } from '../world/GardenNavigation';
 import { socials } from '../content/profile';
 import { PreferencesControl } from './PreferencesControl';
 
@@ -12,9 +12,7 @@ export function Layout({ children, isHome = false, entrance }: { children: React
       <a className="wordmark" href="/" aria-label="Anshul Mehra, home"><span className="monogram" aria-hidden="true">am.</span><span>THE MYSTIC<br />GARDEN</span></a>
       <div className="header-right"><a className="reading-link" href="/?view=read">Reading mode</a><PreferencesControl /></div>
     </header>
-    <nav className="section-nav wrap" aria-label="Portfolio">
-      {scenes.map(scene => <a key={scene.id} href={`${isHome ? '' : '/'}#${scene.id}`}>{scene.label}</a>)}
-    </nav>
+    <GardenNavigation isHome={isHome} />
     {children}
     <WizardCat isHome={isHome} />
     <footer className="site-footer wrap">

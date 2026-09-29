@@ -1,3 +1,4 @@
+import { navigateGarden } from '../world/GardenNavigation';
 import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { usePreferences } from '../preferences/PreferencesProvider';
@@ -86,15 +87,7 @@ export function WizardCat({ isHome }: { isHome: boolean }) {
   const navigate = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
     close();
-    if (!isHome) return;
-    event.preventDefault();
-    const target = document.getElementById(id);
-    if (target) {
-      history.pushState(null, '', `#${id}`);
-      target.setAttribute('tabindex', '-1');
-      target.focus({ preventScroll: true });
-      target.scrollIntoView({ behavior: 'instant', block: 'start' });
-    }
+    navigateGarden(event, id, isHome);
   };
   return <div className={`wizard-companion ${visible ? 'companion-visible' : ''}`}>
     <button ref={trigger} type="button" className="cat-trigger" aria-label="Open garden guide" aria-haspopup="dialog" aria-expanded={open} onClick={show} onPointerEnter={event => setReaction(event.clientX < event.currentTarget.getBoundingClientRect().left + event.currentTarget.offsetWidth / 2 ? 'left' : 'right')} onPointerLeave={() => setReaction(null)} onFocus={() => setReaction('alert')} onBlur={() => setReaction(null)}>
